@@ -1,1 +1,112 @@
-# Build-a-Basic-Express-NodeJS-Server
+# Build-a-Basic-Express-NodeJS-ServerBase URL: `http://localhost:3000`
+
+### GET /
+Returns:
+```
+Hello World
+```
+
+```bash
+curl http://localhost:3000/
+```
+
+---
+
+### GET /about
+Returns:
+```
+About page
+```
+
+```bash
+curl http://localhost:3000/about
+```
+
+---
+
+### GET /foo
+Randomly returns:
+- `sometimes this`
+- `and sometimes that`
+
+```bash
+curl http://localhost:3000/foo
+```
+
+---
+
+### GET /user and /username (Regex Route)
+Returns:
+```
+Matched /user or /username
+```
+
+```bash
+curl http://localhost:3000/user
+curl http://localhost:3000/username
+```
+
+---
+
+### GET /user/:username (Route Parameter)
+Returns a personalized greeting.
+
+Example:
+```
+GET /user/john  →  Hello john
+```
+
+```bash
+curl http://localhost:3000/user/john
+```
+
+---
+
+### GET /get (Query Strings)
+
+Example request:
+```bash
+curl "http://localhost:3000/get?search=books&page=2"
+```
+
+Console output:
+```text
+{ search: 'books', page: '2' }
+```
+
+Response:
+```json
+{
+  "message": "OK",
+  "receivedQuery": {
+    "search": "books",
+    "page": "2"
+  }
+}
+```
+
+---
+
+### 404 Handler
+
+Any undefined route returns:
+```
+404 - Not Found
+```
+
+```bash
+curl http://localhost:3000/does-not-exist
+```
+
+---
+
+## Running the Server
+
+```bash
+npm start
+```
+
+The server will log:
+```
+Server running at http://localhost:3000
+```
