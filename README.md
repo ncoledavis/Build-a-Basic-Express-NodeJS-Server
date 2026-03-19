@@ -1,6 +1,6 @@
 # Build-a-Basic-Express-NodeJS-ServerBase URL: `http://localhost:3000`
 
-Youtube Link:
+Youtube Link: https://youtu.be/ZDmM6FM_EXQ
 
 Make sure when installing node.js from online that you download .npm with it any missing addons. To start this in command prompt find location onf the files and CD into the folder and run node index.js from there you can run the local host in a broswer and access all the functions.
 ### GET /
